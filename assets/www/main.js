@@ -54,6 +54,23 @@ require(
 					}
 				});
 
+				$('#letter-detection').live('pageshow', function(event, ui) { 
+					detectionStatus = 'start';
+					detectionExecute(detectionStatus);
+					correctVoice = playAudio('welldone.mp3', false);
+					mistakeVoice = playAudio('ding.mp3', false);
+				});
+
+				$('#letter-detection').live('pagehide', function(event, ui) {
+					if (correctVoice) {
+						correctVoice.release();
+					}
+					if (mistakeVoice) {
+						mistakeVoice.release();
+					}
+
+				});
+
 				$('#alefbetsong').live(
 						'tap',
 						function(event) {
@@ -119,15 +136,24 @@ require(
 				$('#alefsong-image-img').attr("src", imageSrc);
 			};
 
-			playAudio = function(src) {
+			playAudio = function(src, isPlay) {
+				isPlay = isPlay === undefined ? true : isPlay;
+				var prefix = '/android_asset/www/music/';
+				if (src.indexOf(prefix) != 0) {
+					src = prefix + src;
+				}
+
 				// play media object from src
 				var my_media = new Media(src, onSuccess, onError);
-				my_media.play();
+				
+				if (isPlay) {
+					my_media.play();
+				}
 				return my_media;
 			};
 
 			playWelcomepageSong = function() {
-				welcomepageSong = playAudio("/android_asset/www/music/welcome.mp3");
+				welcomepageSong = playAudio("welcome.mp3");
 			};
 
 			playAlefSong = function() {
@@ -137,7 +163,7 @@ require(
 				} else {
 					alefSong.release();
 				}
-				alefSong = playAudio("/android_asset/www/music/alefsong.mp3");
+				alefSong = playAudio("alefsong.mp3");
 				playLetters(0);
 			};
 
@@ -180,6 +206,69 @@ require(
 			hideAlefSongControl = function(time) {
 				if (alefSongLastTap == time) {
 					$('.alefsong-control').fadeOut();
+				}
+			};
+
+			var words = [ 'שלום' ];
+			var voices = [ 'givemeletter.mp3' ];
+			var mistakes = 0;
+			var blockSelection = false;
+
+			detectionExecute = function(status, arguments) {
+				if (status == 'start') {
+					var startSong = playAudio("start.mp3");
+					setTimeout(function() {
+						detectionExecute('word');
+					}, 3000);
+					setTimeout(function() {
+						startSong.release();
+					}, 4000);
+
+				} else if (status == 'word') {
+					blockSelection = false;
+					var word = words[0];
+					var voice = voices[0];
+					var voiceSong = playAudio(voice);
+					setTimeout(function() {
+						voiceSong.release();
+					}, 2000);
+					mistakes = 0;
+					$("div[id^=detection]").bind('tap', function() {
+						if (blockSelection) {
+							return;
+						}
+						blockSelection = true;
+						detectionExecute('selected', {
+							clicked : this,
+							word : word
+						});
+					});
+
+				} else if (status == 'selected') {
+					var clicked = arguments.clicked.innerText;
+					var word = arguments.word;
+					detectionExecute(word[0] == clicked ? 'correct' : 'wrong',
+							{
+								clicked : arguments.clicked
+							});
+
+				} else if (status == 'correct') {
+					correctVoice.seekTo(1);
+					correctVoice.play();
+					
+					setTimeout(function() {
+						detectionExecute('word');
+					}, 2000);
+
+					var clicked = arguments.clicked;
+					clicked.style.visibility = "hidden";
+
+				} else if (status == 'wrong') {
+					mistakeVoice.seekTo(1);
+					mistakeVoice.play();
+
+					mistakes++;
+					blockSelection = false;
 				}
 			};
 
