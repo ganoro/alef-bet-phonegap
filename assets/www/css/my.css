@@ -1,0 +1,191 @@
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+#welcomepage {
+	background: url('../images/dot.png');
+	background-repeat: repeat;
+}
+
+#alefbetsong {
+	background: url('../images/dot.png');
+	background-repeat: repeat;
+}
+
+.alefsong-control {
+	top: 80%;
+	position: absolute;
+	left: 35%;
+}
+
+.alefsong-main {
+	top: 25%;
+	position: absolute;
+	right: 20%;
+}
+
+.alefsong-image {
+	top: 25%;
+	position: absolute;
+	left: 20%;
+}
+
+.red-image {
+	width: 17em;
+	height: 17em;
+	background-color: white;	
+	padding: 1em 1em 1em 1em;
+	border : solid thick red;
+	border-radius: 8px;
+}
+
+.green-image {
+	width: 17em;
+	height: 17em;
+	background-color: white;	
+	padding: 1em 1em 1em 1em;
+	border : solid thick green;
+	border-radius: 8px;
+}
+
+.blue-image {
+	width: 17em;
+	height: 17em;
+	background-color: white;	
+	padding: 1em 1em 1em 1em;
+	border : solid thick blue;
+	border-radius: 8px;
+}
+
+.purple-image {
+	width: 17em;
+	height: 17em;
+	background-color: white;	
+	padding: 1em 1em 1em 1em;
+	border : solid thick purple;
+	border-radius: 8px;
+}
+
+.yellow-image {
+	width: 17em;
+	height: 17em;
+	background-color: white;	
+	padding: 1em 1em 1em 1em;
+	border : solid thick yellow;
+	border-radius: 8px;
+}
+
+.red-letter {
+	background-color: white;	
+	padding: 0em 0.3em 0em 0.3em;
+	text-align: center;
+	color: red;
+	font: 17em "courier";
+	font-weight: 900;
+	border : solid thick red;
+	border-radius: 8px;
+}
+
+.blue-letter {
+	background-color: white;	
+	padding: 0em 0.3em 0em 0.3em;
+	text-align: center;
+	color: blue;
+	font: 17em "courier";
+	font-weight: 900;
+	border : solid thick blue;
+	border-radius: 8px;
+}
+
+.green-letter {
+	background-color: white;	
+	padding: 0em 0.3em 0em 0.3em;
+	text-align: center;
+	color: green;
+	font: 17em "courier";
+	font-weight: 900;
+	border : solid thick green;
+	border-radius: 8px;
+}
+
+.purple-letter {
+	background-color: white;	
+	padding: 0em 0.3em 0em 0.3em;
+	text-align: center;
+	color: purple;
+	font: 17em "courier";
+	font-weight: 900;
+	border : solid thick purple;
+	border-radius: 8px;
+}
+
+.yellow-letter {
+	background-color: white;	
+	padding: 0em 0.3em 0em 0.3em;
+	text-align: center;
+	color: yellow;
+	font: 17em "courier";
+	font-weight: 900;
+	border : solid thick yellow;
+	border-radius: 8px;
+}
+
+.red-letter-small {
+	background-color: white;	
+	padding: 0 0.2em 0em 0.2em;
+	text-align: center;
+	color: red;
+	font: 2em "courier";
+	font-weight: 800;
+	display: inline-block;
+	border : solid medium red;
+	border-radius: 4px;
+}
+.blue-letter-small {
+	background-color: white;	
+	padding: 0 0.2em 0em 0.2em;
+	text-align: center;
+	color: blue;
+	font: 2em "courier";
+	font-weight: 800;
+	display: inline-block;
+	border : solid medium blue;
+	border-radius: 4px;
+}
+.green-letter-small {
+	background-color: white;	
+	padding: 0 0.2em 0em 0.2em;
+	text-align: center;
+	color: green;
+	font: 2em "courier";
+	font-weight: 800;
+	display: inline-block;
+	border : solid medium green;
+	border-radius: 4px;
+}
+.purple-letter-small {
+	background-color: white;	
+	padding: 0 0.2em 0em 0.2em;
+	text-align: center;
+	color: purple;
+	font: 2em "courier";
+	font-weight: 800;
+	display: inline-block;
+	border : solid medium purple;
+	border-radius: 4px;
+}
+.yellow-letter-small {
+	background-color: white;	
+	padding: 0 0.2em 0em 0.2em;
+	text-align: center;
+	color: yellow;
+	font: 2em "courier";
+	font-weight: 800;
+	display: inline-block;
+	border : solid medium yellow;
+	border-radius: 4px;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="lib/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet/less" type="text/css" href="css/styles.less">
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script data-main="main" src="lib/require-jquery.js"></script>
+</head>
+
+	<div data-role="page" id="welcomepage">
+		<div data-role="content">
+			<div class="ui-grid-b">
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b">
+					<a data-role="button" data-transition="fade" href="#alefbetsong">
+						Screen1 </a>
+				</div>
+				<div class="ui-block-c"></div>
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b">
+					<a data-role="button" data-transition="fade" href="#letter-detection">
+						Screen2 </a>
+				</div>
+				<div class="ui-block-c"></div>
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b">
+					<a data-role="button" data-transition="fade" href="#welcomepage">
+						Screen3 </a>
+				</div>
+				<div class="ui-block-c"></div>
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b"></div>
+				<div class="ui-block-c"></div>
+				<div class="ui-block-a"></div>
+				<div class="ui-block-b">
+					<a data-role="button" data-transition="fade" href="#settings">
+						Screen4 </a>
+				</div>
+				<div class="ui-block-c"></div>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="alefbetsong">
+		<div data-role="content">
+			<div class="alefsong-control" data-role="controlgroup" data-type="horizontal" >
+				<a id="alefsong-control-mute" href="#" data-role="button" data-icon="plus">Mute</a>
+				<a href="#welcomepage" data-role="button" data-icon="delete">Exit</a>
+			</div>
+			<table style="width: 100%; height: 100%">
+			  <tr style="height: 20%">
+				<td style="width: 4.55%"><span id="alefsong-22" class="purple-letter-small">ת</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-21" class="red-letter-small"   >ש</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-20" class="yellow-letter-small">ר</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-19" class="blue-letter-small"  >ק</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-18" class="green-letter-small" >צ</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-17" class="purple-letter-small">פ</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-16" class="red-letter-small"   >ע</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-15" class="yellow-letter-small">ס</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-14" class="blue-letter-small"  >נ</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-13" class="green-letter-small" >מ</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-12" class="purple-letter-small">ל</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-11" class="red-letter-small"   >כ</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-10" class="yellow-letter-small">י</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-9"  class="blue-letter-small"  >ט</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-8"  class="green-letter-small" >ח</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-7"  class="purple-letter-small">ז</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-6"  class="red-letter-small"   >ו</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-5"  class="yellow-letter-small">ה</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-4"  class="blue-letter-small"  >ד</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-3"  class="green-letter-small" >ג</span> </td>
+				<td style="width: 4.55%"><span id="alefsong-2"  class="purple-letter-small">ב</span> </td>
+			    <td style="width: 4.55%"><span id="alefsong-1"  class="red-letter-small"   >א</span> </td>
+ 		      </tr>
+			</table>
+			<div class="alefsong-main" >
+				<span id="alefsong-main-letter"></span>
+			</div>
+			<div class="alefsong-image" >
+				<img id="alefsong-image-img"/>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="letter-detection">
+		<div data-role="content">
+			<div id="detection-22" class="purple-letter-small">ת</div>
+			<div id="detection-21" class="red-letter-small"   >ש</div>
+			<div id="detection-20" class="yellow-letter-small">ר</div>
+			<div id="detection-19" class="blue-letter-small"  >ק</div>
+			<div id="detection-18" class="green-letter-small" >צ</div>
+			<div id="detection-17" class="purple-letter-small">פ</div>
+			<div id="detection-16" class="red-letter-small"   >ע</div>
+			<div id="detection-15" class="yellow-letter-small">ס</div>
+			<div id="detection-14" class="blue-letter-small"  >נ</div>
+			<div id="detection-13" class="green-letter-small" >מ</div>
+			<div id="detection-12" class="purple-letter-small">ל</div>
+			<div id="detection-11" class="red-letter-small"   >כ</div>
+			<div id="detection-10" class="yellow-letter-small">י</div>
+			<div id="detection-9"  class="blue-letter-small"  >ט</div>
+			<div id="detection-8"  class="green-letter-small" >ח</div>
+			<div id="detection-7"  class="purple-letter-small">ז</div>
+			<div id="detection-6"  class="red-letter-small"   >ו</div>
+			<div id="detection-5"  class="yellow-letter-small">ה</div>
+			<div id="detection-4"  class="blue-letter-small"  >ד</div>
+			<div id="detection-3"  class="green-letter-small" >ג</div>
+			<div id="detection-2"  class="purple-letter-small">ב</div>
+		    <div id="detection-1"  class="red-letter-small"   >א</div>
+		    <div id="detection-hint">hint</div>
+		</div>
+	</div>
+	<div data-role="page" id="settings">
+		<div data-role="content">
+			Settings <a data-role="button" data-transition="fade"
+				href="#welcomepage">Screen1 </a>
+		</div>
+	</div>
+
+</body>
+</html>

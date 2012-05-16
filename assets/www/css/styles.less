@@ -1,0 +1,136 @@
+/* templates */
+.rounded-corners (@radius: 8px) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+.imaged (@imageColor){
+	width: 17em;
+	height: 17em;
+	background-color: white;	
+	padding: 1em 1em 1em 1em;
+	border : solid thick @imageColor;
+	.rounded-corners
+}
+
+.lettered (@letterColor){
+	background-color: white;	
+	padding: 0em 0.3em 0em 0.3em;
+	text-align: center;
+	color: @letterColor;
+	font: 17em "courier";
+	font-weight: 900;
+	border : solid thick @letterColor;
+	.rounded-corners
+}
+
+.lettersmalled (@letterColor){
+	background-color: white;	
+	padding: 0 0.2em 0em 0.2em;
+	text-align: center;
+	color: @letterColor;
+	font: 2em "courier";
+	font-weight: 800;
+	display: inline-block;
+	border : solid medium @letterColor;
+	.rounded-corners(4px);
+}
+
+/* rules */
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+#welcomepage {
+	background: url('../images/dot.png');
+	background-repeat: repeat;
+}
+
+#alefbetsong {
+	background: url('../images/dot.png');
+	background-repeat: repeat;
+}
+
+.alefsong-control {
+	top: 80%;
+	position: absolute;
+	left: 35%;
+}
+
+.alefsong-main {
+	top: 25%;
+	position: absolute;
+	right: 20%;
+}
+
+.alefsong-image {
+	top: 25%;
+	position: absolute;
+	left: 20%;
+}
+
+.red-image {
+	.imaged(red)
+}
+
+.green-image {
+	.imaged(green)
+}
+
+.blue-image {
+	.imaged(blue)
+}
+
+.purple-image {
+	.imaged(purple)
+}
+
+.yellow-image {
+	.imaged(yellow)
+}
+
+.red-letter {
+	.lettered(red)
+}
+
+.blue-letter {
+	.lettered(blue)
+}
+
+.green-letter {
+	.lettered(green)
+}
+
+.purple-letter {
+	.lettered(purple)
+}
+
+.yellow-letter {
+	.lettered(yellow)
+}
+
+.red-letter-small {
+	.lettersmalled(red)
+}
+
+.blue-letter-small {
+	.lettersmalled(blue)
+}
+
+.green-letter-small {
+	.lettersmalled(green)
+}
+
+.purple-letter-small {
+	.lettersmalled(purple)
+}
+
+.yellow-letter-small {
+	.lettersmalled(yellow)
+}
