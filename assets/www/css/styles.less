@@ -37,6 +37,21 @@
 	.rounded-corners(4px);
 }
 
+.lettermediumed (@letterColor){
+	position: absolute;
+	background-color: white;	
+	padding: 0 0.2em 0em 0.2em;
+	text-align: center;
+	color: @letterColor;
+	font: 6em "courier";
+	font-weight: 800;
+	display: inline-block;
+	border : solid medium @letterColor;
+	.rounded-corners;
+}
+
+@yellower: darken(yellow, 2%);
+
 /* rules */
 
 .text-align-center {
@@ -75,6 +90,79 @@
 	left: 20%;
 }
 
+.detection-location-top-1 {
+	top: 10%	
+}
+
+.detection-location-top-2 {
+	top: 40%	
+}
+
+.detection-location-top-3 {
+	top: 70%	
+}
+
+.detection-location-right-1 {
+	right: 5%	
+}
+
+.detection-location-right-2 {
+	right: 18%	
+}
+
+.detection-location-right-3 {
+	right: 31%	
+}
+
+.detection-location-right-4 {
+	right: 44%	
+}
+
+.detection-location-right-5 {
+	right: 57%	
+}
+
+.detection-location-right-6 {
+	right: 70%	
+}
+
+.detection-location-right-7 {
+	right: 83%	
+}
+
+.detection-location-right-1-prime {
+	right: 2%	
+}
+
+.detection-location-right-2-prime {
+	right: 14%	
+}
+
+.detection-location-right-3-prime {
+	right: 26%	
+}
+
+.detection-location-right-4-prime {
+	right: 38%	
+}
+
+.detection-location-right-5-prime {
+	right: 50%	
+}
+
+.detection-location-right-6-prime {
+	right: 62%	
+}
+
+.detection-location-right-7-prime {
+	right: 74%	
+}
+
+.detection-location-right-8-prime {
+	right: 88%	
+}
+
+
 .red-image {
 	.imaged(red)
 }
@@ -92,7 +180,7 @@
 }
 
 .yellow-image {
-	.imaged(yellow)
+	.imaged(@yellower)
 }
 
 .red-letter {
@@ -112,7 +200,7 @@
 }
 
 .yellow-letter {
-	.lettered(yellow)
+	.lettered(@yellower)
 }
 
 .red-letter-small {
@@ -132,5 +220,25 @@
 }
 
 .yellow-letter-small {
-	.lettersmalled(yellow)
+	.lettersmalled(@yellower)
+}
+
+.red-letter-medium {
+	.lettermediumed(red)
+}
+
+.blue-letter-medium {
+	.lettermediumed(blue)
+}
+
+.green-letter-medium {
+	.lettermediumed(green)
+}
+
+.purple-letter-medium {
+	.lettermediumed(purple)
+}
+
+.yellow-letter-medium {
+	.lettermediumed(@yellower);
 }
