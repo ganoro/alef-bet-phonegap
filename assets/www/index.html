@@ -29,13 +29,20 @@
 				<div class="ui-block-c"></div>
 				<div class="ui-block-a"></div>
 				<div class="ui-block-b">
-					<a data-role="button" data-transition="fade" href="#welcomepage">
+					<a data-role="button" data-transition="fade" href="#typewriter">
 						Screen3 </a>
 				</div>
-				<div class="ui-block-c"></div>
+				<div class="ui-block-c">
+									<a data-role="button" data-transition="fade" href="#memory-game">
+						Screen5 </a>
+				</div>
+				
 				<div class="ui-block-a"></div>
 				<div class="ui-block-b"></div>
-				<div class="ui-block-c"></div>
+				<div class="ui-block-c">
+									<a data-role="button" data-transition="fade" href="#drag-drop">
+						Screen6 </a>
+				</div>
 				<div class="ui-block-a"></div>
 				<div class="ui-block-b">
 					<a data-role="button" data-transition="fade" href="#settings">
@@ -87,33 +94,89 @@
 	</div>
 	<div data-role="page" id="letter-detection">
 		<div data-role="content">
+			<div class="detection-control" data-role="controlgroup" data-type="horizontal" >
+				<a href="#welcomepage" data-role="button" data-icon="delete">Exit</a>
+			</div>
 		
-			<div id="detection7"  class="detection-location-top-1 detection-location-right-7 purple-letter-medium">ז</div>
-			<div id="detection6"  class="detection-location-top-1 detection-location-right-6 red-letter-medium   ">ו</div>
-			<div id="detection5"  class="detection-location-top-1 detection-location-right-5 yellow-letter-medium">ה</div>
-			<div id="detection4"  class="detection-location-top-1 detection-location-right-4 blue-letter-medium  ">ד</div>
-			<div id="detection3"  class="detection-location-top-1 detection-location-right-3 green-letter-medium" >ג</div>
-			<div id="detection2"  class="detection-location-top-1 detection-location-right-2 purple-letter-medium">ב</div>
-		    <div id="detection1"  class="detection-location-top-1 detection-location-right-1 red-letter-medium"   >א</div>
+			<div id="detection-7"  class="detection-location-top-1 detection-location-right-7 purple-letter-medium">ז</div>
+			<div id="detection-6"  class="detection-location-top-1 detection-location-right-6 red-letter-medium   ">ו</div>
+			<div id="detection-5"  class="detection-location-top-1 detection-location-right-5 yellow-letter-medium">ה</div>
+			<div id="detection-4"  class="detection-location-top-1 detection-location-right-4 blue-letter-medium  ">ד</div>
+			<div id="detection-3"  class="detection-location-top-1 detection-location-right-3 green-letter-medium" >ג</div>
+			<div id="detection-2"  class="detection-location-top-1 detection-location-right-2 purple-letter-medium">ב</div>
+		    <div id="detection-1"  class="detection-location-top-1 detection-location-right-1 red-letter-medium"   >א</div>
 
-			<div id="detection15" class="detection-location-top-2 detection-location-right-8-prime yellow-letter-medium">ס</div>
-			<div id="detection14" class="detection-location-top-2 detection-location-right-7-prime blue-letter-medium"  >נ</div>
-			<div id="detection13" class="detection-location-top-2 detection-location-right-6-prime green-letter-medium" >מ</div>
-			<div id="detection12" class="detection-location-top-2 detection-location-right-5-prime purple-letter-medium">ל</div>
-			<div id="detection11" class="detection-location-top-2 detection-location-right-4-prime red-letter-medium"   >כ</div>
-			<div id="detection10" class="detection-location-top-2 detection-location-right-3-prime yellow-letter-medium">י</div>
-			<div id="detection9"  class="detection-location-top-2 detection-location-right-2-prime blue-letter-medium"  >ט</div>
-			<div id="detection8"  class="detection-location-top-2 detection-location-right-1-prime green-letter-medium" >ח</div>
+			<div id="detection-15" class="detection-location-top-2 detection-location-right-8-prime yellow-letter-medium">ס</div>
+			<div id="detection-14" class="detection-location-top-2 detection-location-right-7-prime blue-letter-medium"  >נ</div>
+			<div id="detection-13" class="detection-location-top-2 detection-location-right-6-prime green-letter-medium" >מ</div>
+			<div id="detection-12" class="detection-location-top-2 detection-location-right-5-prime purple-letter-medium">ל</div>
+			<div id="detection-11" class="detection-location-top-2 detection-location-right-4-prime red-letter-medium"   >כ</div>
+			<div id="detection-10" class="detection-location-top-2 detection-location-right-3-prime yellow-letter-medium">י</div>
+			<div id="detection-9"  class="detection-location-top-2 detection-location-right-2-prime blue-letter-medium"  >ט</div>
+			<div id="detection-8"  class="detection-location-top-2 detection-location-right-1-prime green-letter-medium" >ח</div>
 
-			<div id="detection22" class="detection-location-top-3 detection-location-right-7 purple-letter-medium">ת</div>
-			<div id="detection21" class="detection-location-top-3 detection-location-right-6 red-letter-medium"   >ש</div>
-			<div id="detection20" class="detection-location-top-3 detection-location-right-5 yellow-letter-medium">ר</div>
-			<div id="detection19" class="detection-location-top-3 detection-location-right-4 blue-letter-medium"  >ק</div>
-			<div id="detection18" class="detection-location-top-3 detection-location-right-3 green-letter-medium" >צ</div>
-			<div id="detection17" class="detection-location-top-3 detection-location-right-2 purple-letter-medium">פ</div>
-			<div id="detection16" class="detection-location-top-3 detection-location-right-1 red-letter-medium"   >ע</div>
+			<div id="detection-22" class="detection-location-top-3 detection-location-right-7 purple-letter-medium">ת</div>
+			<div id="detection-21" class="detection-location-top-3 detection-location-right-6 red-letter-medium"   >ש</div>
+			<div id="detection-20" class="detection-location-top-3 detection-location-right-5 yellow-letter-medium">ר</div>
+			<div id="detection-19" class="detection-location-top-3 detection-location-right-4 blue-letter-medium"  >ק</div>
+			<div id="detection-18" class="detection-location-top-3 detection-location-right-3 green-letter-medium" >צ</div>
+			<div id="detection-17" class="detection-location-top-3 detection-location-right-2 purple-letter-medium">פ</div>
+			<div id="detection-16" class="detection-location-top-3 detection-location-right-1 red-letter-medium"   >ע</div>
 
-		    <div id="detection-hint" style="visibility: hidden">hint</div>
+		    <div id="hint-detection" style="visibility: hidden">hint</div>
+		</div>
+	</div>
+	<div data-role="page" id="typewriter">
+		<div data-role="content">
+			<div class="detection-control" data-role="controlgroup" data-type="horizontal" >
+				<a href="#welcomepage" data-role="button" data-icon="delete">Exit</a>
+			</div>
+
+			<div id="main-writer-letter"></div>
+		
+			<div id="writer-7"  class="writer-location-top-1 detection-location-right-7 purple-letter-medium-minus">ז</div>
+			<div id="writer-6"  class="writer-location-top-1 detection-location-right-6 red-letter-medium-minus"   >ו</div>
+			<div id="writer-5"  class="writer-location-top-1 detection-location-right-5 yellow-letter-medium-minus">ה</div>
+			<div id="writer-4"  class="writer-location-top-1 detection-location-right-4 blue-letter-medium-minus"  >ד</div>
+			<div id="writer-3"  class="writer-location-top-1 detection-location-right-3 green-letter-medium-minus" >ג</div>
+			<div id="writer-2"  class="writer-location-top-1 detection-location-right-2 purple-letter-medium-minus">ב</div>
+		    <div id="writer-1"  class="writer-location-top-1 detection-location-right-1 red-letter-medium-minus"   >א</div>
+
+			<div id="writer-15" class="writer-location-top-2 detection-location-right-8-prime yellow-letter-medium-minus">ס</div>
+			<div id="writer-14" class="writer-location-top-2 detection-location-right-7-prime blue-letter-medium-minus"  >נ</div>
+			<div id="writer-13" class="writer-location-top-2 detection-location-right-6-prime green-letter-medium-minus" >מ</div>
+			<div id="writer-12" class="writer-location-top-2 detection-location-right-5-prime purple-letter-medium-minus">ל</div>
+			<div id="writer-11" class="writer-location-top-2 detection-location-right-4-prime red-letter-medium-minus"   >כ</div>
+			<div id="writer-10" class="writer-location-top-2 detection-location-right-3-prime yellow-letter-medium-minus">י</div>
+			<div id="writer-9"  class="writer-location-top-2 detection-location-right-2-prime blue-letter-medium-minus"  >ט</div>
+			<div id="writer-8"  class="writer-location-top-2 detection-location-right-1-prime green-letter-medium-minus" >ח</div>
+
+			<div id="writer-22" class="writer-location-top-3 detection-location-right-7 purple-letter-medium-minus">ת</div>
+			<div id="writer-21" class="writer-location-top-3 detection-location-right-6 red-letter-medium-minus"   >ש</div>
+			<div id="writer-20" class="writer-location-top-3 detection-location-right-5 yellow-letter-medium-minus">ר</div>
+			<div id="writer-19" class="writer-location-top-3 detection-location-right-4 blue-letter-medium-minus"  >ק</div>
+			<div id="writer-18" class="writer-location-top-3 detection-location-right-3 green-letter-medium-minus" >צ</div>
+			<div id="writer-17" class="writer-location-top-3 detection-location-right-2 purple-letter-medium-minus">פ</div>
+			<div id="writer-16" class="writer-location-top-3 detection-location-right-1 red-letter-medium-minus"   >ע</div>
+		</div>
+	</div>
+	<div data-role="page" id="memory-game">
+		<div data-role="content">
+			<div class="detection-control" data-role="controlgroup" data-type="horizontal" >
+				<a href="#welcomepage" data-role="button" data-icon="delete">Exit</a>
+			</div>
+			<div id="board-game"></div>
+		</div>
+	</div>
+	<div data-role="page" id="drag-drop">
+		<div data-role="content">
+			<div class="detection-control" data-role="controlgroup" data-type="horizontal" >
+				<a href="#welcomepage" data-role="button" data-icon="delete">Exit</a>
+			</div>
+			<div class="containment-wrapper"></div>
+			<div id="drag-letter">&nbsp;</div>
+			<div id="drop-1">&nbsp;</div>
+			<div id="drop-2">&nbsp;</div>
 		</div>
 	</div>
 	<div data-role="page" id="settings">
@@ -122,6 +185,5 @@
 				href="#welcomepage">Screen1 </a>
 		</div>
 	</div>
-
 </body>
 </html>
