@@ -2,8 +2,8 @@
 <project name="alef-bet-custom">
 	
     <target name="-pre-build">
-        <rename src="assets/www/cordova.android.js" dest="cordova.js"/>
-        <echo message="from -pre-build"/>
+        <move file="assets/www/cordova.android.js" tofile="assets/www/cordova.js"/>
+        <echo message="renaming assets/www/cordova.android.js "/>
     </target>
     
 </project>
