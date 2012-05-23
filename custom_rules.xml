@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="alef-bet-custom">
+	
+    <target name="-pre-build">
+        <echo message="from -pre-build"/>
+    </target>
+
+    <target name="pre-build">
+        <echo message="from pre-build"/>
+    </target>
+    
+</project>
