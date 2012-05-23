@@ -4,7 +4,7 @@
     <target name="-pre-build">
         <move file="assets/www/cordova.android.js" tofile="assets/www/cordova.js"/>
         <echo message="renaming assets/www/cordova.android.js "/>
-        <replace file="assets/www/lib/config.js" token="edition : 'free'" value="edition : '${config.edition}'" failOnNoReplacement="true"/>
+        <replace file="assets/www/lib/config.js" token="edition : 'free'" value="edition : '${config.edition}'" failOnNoReplacements="true"/>
         <echo message="replacing to edition type ${config.edition}"/>
     </target>
     
